@@ -19,6 +19,10 @@ dependencies {
     implementation(ktorLibs.server.netty)
     implementation(libs.logback.classic)
 
+    // Add new dependency
+    implementation(ktorLibs.server.statusPages)
+    implementation(libs.logback.classic)
+
     testImplementation(kotlin("test"))
     testImplementation(ktorLibs.server.testHost)
 }
