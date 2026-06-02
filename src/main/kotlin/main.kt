@@ -16,3 +16,6 @@ fun main(args: Array<String>) {
 fun Application.rootModule() {//Чтобы IDE успокоилось
     // Сюда вы будете добавлять routing { ... } и другие настройки
 }
+
+//Ссылка
+//   https://ktor.io/docs/server-requests-and-responses.html#add-form-handler
