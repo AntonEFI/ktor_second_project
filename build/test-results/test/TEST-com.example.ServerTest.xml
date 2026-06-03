@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.ServerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-06-02T10:08:56.143Z" hostname="DESKTOP-U9AI27E" time="0.792">
+<testsuite name="com.example.ServerTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-06-03T11:26:48.421Z" hostname="DESKTOP-U9AI27E" time="0.779">
   <properties/>
-  <testcase name="test new endpoint" classname="com.example.ServerTest" time="0.792">
-    <failure message="org.junit.ComparisonFailure: expected:&lt;[&lt;h1&gt;Hello From Ktor&lt;/h1&gt;]&gt; but was:&lt;[Hello From Ktor]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[&lt;h1&gt;Hello From Ktor&lt;/h1&gt;]&gt; but was:&lt;[Hello From Ktor]&gt;
-	at app//org.junit.Assert.assertEquals(Assert.java:117)
-	at app//kotlin.test.junit.JUnitAsserter.assertEquals(JUnitSupport.kt:32)
-	at app//kotlin.test.AssertionsKt__AssertionsKt.assertEquals(Assertions.kt:63)
-	at app//kotlin.test.AssertionsKt.assertEquals(Unknown Source)
-	at app//kotlin.test.AssertionsKt__AssertionsKt.assertEquals$default(Assertions.kt:62)
-	at app//kotlin.test.AssertionsKt.assertEquals$default(Unknown Source)
-	at app//com.example.ServerTest$test new endpoint$1.invokeSuspend(ServerTest.kt:28)
-	at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
-	at app//kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at app//kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
-	at app//kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+  <testcase name="newTasksCanBeAdded" classname="com.example.ServerTest" time="0.779">
+    <failure message="java.lang.AssertionError: expected:&lt;204 No Content&gt; but was:&lt;302 Found&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;204 No Content&gt; but was:&lt;302 Found&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at kotlin.test.junit.JUnitAsserter.assertEquals(JUnitSupport.kt:32)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals(Assertions.kt:63)
+	at kotlin.test.AssertionsKt.assertEquals(Unknown Source)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals$default(Assertions.kt:62)
+	at kotlin.test.AssertionsKt.assertEquals$default(Unknown Source)
+	at com.example.ServerTest$newTasksCanBeAdded$1.invokeSuspend(ServerTest.kt:53)
+	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
+	at io.ktor.server.testing.TestApplicationKt.runTestApplication(TestApplication.kt:518)
+	at io.ktor.server.testing.TestApplicationKt$testApplication$1.invokeSuspend(TestApplication.kt:502)
+	at io.ktor.test.dispatcher.TestCommonKt$runTestWithRealTime$1.invokeSuspend(TestCommon.kt:49)
+	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:317)
+Caused by: java.lang.AssertionError: expected:&lt;204 No Content&gt; but was:&lt;302 Found&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at kotlin.test.junit.JUnitAsserter.assertEquals(JUnitSupport.kt:32)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals(Assertions.kt:63)
+	at kotlin.test.AssertionsKt.assertEquals(Unknown Source)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals$default(Assertions.kt:62)
+	at kotlin.test.AssertionsKt.assertEquals$default(Unknown Source)
+	at com.example.ServerTest$newTasksCanBeAdded$1.invokeSuspend(ServerTest.kt:53)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
 </failure>
   </testcase>
-  <system-out><![CDATA[2026-06-02 15:08:56.777 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
-2026-06-02 15:08:56.850 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - Application started in 0.088 seconds.
-2026-06-02 15:08:56.852 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at http://localhost:80
-2026-06-02 15:08:56.853 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at https://localhost:443
+  <system-out><![CDATA[2026-06-03 16:26:49.063 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2026-06-03 16:26:49.131 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - Application started in 0.087 seconds.
+2026-06-03 16:26:49.133 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at http://localhost:80
+2026-06-03 16:26:49.133 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at https://localhost:443
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.792s</div>
+<div class="counter">0.779s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,27 +73,44 @@
 <div class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="test new endpoint"></a>
-<h3 class="failures">test new endpoint</h3>
+<a name="newTasksCanBeAdded"></a>
+<h3 class="failures">newTasksCanBeAdded</h3>
 <span class="code">
-<pre id="test-message-test new endpoint">org.junit.ComparisonFailure: expected:&lt;[&lt;h1&gt;Hello From Ktor&lt;/h1&gt;]&gt; but was:&lt;[Hello From Ktor]&gt;
-	at app//org.junit.Assert.assertEquals(Assert.java:117)
-	at app//kotlin.test.junit.JUnitAsserter.assertEquals(JUnitSupport.kt:32)
-	at app//kotlin.test.AssertionsKt__AssertionsKt.assertEquals(Assertions.kt:63)
-	at app//kotlin.test.AssertionsKt.assertEquals(Unknown Source)
-	at app//kotlin.test.AssertionsKt__AssertionsKt.assertEquals$default(Assertions.kt:62)
-	at app//kotlin.test.AssertionsKt.assertEquals$default(Unknown Source)
-	at app//com.example.ServerTest$test new endpoint$1.invokeSuspend(ServerTest.kt:28)
-	at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
-	at app//kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at app//kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
-	at app//kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
-	at app//kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+<pre id="test-message-newTasksCanBeAdded">java.lang.AssertionError: expected:&lt;204 No Content&gt; but was:&lt;302 Found&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at kotlin.test.junit.JUnitAsserter.assertEquals(JUnitSupport.kt:32)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals(Assertions.kt:63)
+	at kotlin.test.AssertionsKt.assertEquals(Unknown Source)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals$default(Assertions.kt:62)
+	at kotlin.test.AssertionsKt.assertEquals$default(Unknown Source)
+	at com.example.ServerTest$newTasksCanBeAdded$1.invokeSuspend(ServerTest.kt:53)
+	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
+	at io.ktor.server.testing.TestApplicationKt.runTestApplication(TestApplication.kt:518)
+	at io.ktor.server.testing.TestApplicationKt$testApplication$1.invokeSuspend(TestApplication.kt:502)
+	at io.ktor.test.dispatcher.TestCommonKt$runTestWithRealTime$1.invokeSuspend(TestCommon.kt:49)
+	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:317)
+Caused by: java.lang.AssertionError: expected:&lt;204 No Content&gt; but was:&lt;302 Found&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at kotlin.test.junit.JUnitAsserter.assertEquals(JUnitSupport.kt:32)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals(Assertions.kt:63)
+	at kotlin.test.AssertionsKt.assertEquals(Unknown Source)
+	at kotlin.test.AssertionsKt__AssertionsKt.assertEquals$default(Assertions.kt:62)
+	at kotlin.test.AssertionsKt.assertEquals$default(Unknown Source)
+	at com.example.ServerTest$newTasksCanBeAdded$1.invokeSuspend(ServerTest.kt:53)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
 </pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-test new endpoint">Copy</button>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-newTasksCanBeAdded">Copy</button>
 </span>
 </div>
 </div>
@@ -108,8 +125,8 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">test new endpoint</td>
-<td class="failures">0.792s</td>
+<td class="failures">newTasksCanBeAdded</td>
+<td class="failures">0.779s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -117,10 +134,10 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre id="class-stdout">2026-06-02 15:08:56.777 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
-2026-06-02 15:08:56.850 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - Application started in 0.088 seconds.
-2026-06-02 15:08:56.852 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at http://localhost:80
-2026-06-02 15:08:56.853 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at https://localhost:443
+<pre id="class-stdout">2026-06-03 16:26:49.063 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2026-06-03 16:26:49.131 [DefaultDispatcher-worker-2 @call-context#3] INFO  io.ktor.test - Application started in 0.087 seconds.
+2026-06-03 16:26:49.133 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at http://localhost:80
+2026-06-03 16:26:49.133 [DefaultDispatcher-worker-1 @coroutine#5] INFO  io.ktor.test - Responding at https://localhost:443
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
 </span>
@@ -133,7 +150,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.1.0</a> at 2 июн. 2026 г., 15:08:57</p>
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at 3 июн. 2026 г., 16:26:49</p>
 </div>
 </div>
 </body>
